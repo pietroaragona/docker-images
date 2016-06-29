@@ -3,6 +3,8 @@ FROM ubuntu:16.04
 MAINTAINER Pietro Aragona <pietroaragona@gmail.com>
 
 RUN apt-get update && apt-get install -y \
+  curl \
+  dos2unix \
   git \
   youtube-dl \
   wget \

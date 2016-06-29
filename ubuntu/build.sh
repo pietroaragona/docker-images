@@ -1,1 +1,1 @@
-docker build -t myubuntu .
+docker build -t pietroaragona/myubuntu .
