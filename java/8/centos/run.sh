@@ -1,0 +1,1 @@
+docker run -it pietroaragona/java8-centos java -version
