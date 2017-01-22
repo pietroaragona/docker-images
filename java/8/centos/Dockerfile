@@ -1,8 +1,9 @@
 FROM centos:7
 MAINTAINER Pietro Aragona <pietroaragona@gmail.com>
 
-ENV JAVA_VERSION 8u101
-ENV BUILD_VERSION b13
+ENV JAVA_HOME=/usr/java/latest \
+    JAVA_VERSION=8u101 \
+    BUILD_VERSION=b13 
 #8u112
 
 
@@ -16,11 +17,10 @@ RUN yum -y upgrade && \
 # Install java
 	yum -y install /tmp/jdk-8-linux-x64.rpm && \
 	rm /tmp/jdk-8-linux-x64.rpm && \
-# Clean	
-	yum clean all && \
+
+# Clean
+	yum clean all && rm -rf /var/cache/dnf/* && \
 
     alternatives --install /usr/bin/java java /usr/java/latest/bin/java 200000 && \
     alternatives --install /usr/bin/javaws javaws /usr/java/latest/bin/javaws 200000 && \
     alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
-
-ENV JAVA_HOME /usr/java/latest
