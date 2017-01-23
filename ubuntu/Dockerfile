@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
   git \
   youtube-dl \
   wget \
-  &&  rm -rf /var/lib/apt/lists/*
+  &&  apt-get autoclean && apt-get autoremove && rm -rf /var/lib/apt/lists/*
 
 
 # create same user of host machine
