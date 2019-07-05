@@ -1,4 +1,5 @@
 FROM jenkins/jenkins:lts
+MAINTAINER Pietro Aragona
 
 # https://github.com/jenkinsci/docker#preinstalling-plugins
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
