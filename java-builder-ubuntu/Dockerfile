@@ -33,5 +33,6 @@ RUN apt-get install -y \
 RUN apt install -y \
     openjdk-8-jdk \
     maven=3.6.0-1~18.04.1 && \
+    rm -rf /var/lib/apt/lists/* && \
     update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
     #update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
