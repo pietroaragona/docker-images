@@ -1,6 +1,6 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
-MAINTAINER Pietro Aragona
+LABEL org.opencontainers.image.authors="Pietro Aragona"
 
 
 ### common utils
@@ -26,13 +26,13 @@ RUN apt-get install -y \
     apt-get update && apt-get upgrade -y && \
     apt-get install -y docker-ce docker-ce-cli containerd.io \
     && \
-    curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
+    curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
     chmod +x /usr/local/bin/docker-compose
 
 # install Java and Maven
 RUN apt install -y \
     openjdk-8-jdk \
-    maven=3.6.0-1~18.04.1 && \
+    maven=3.6.3-1 && \
     rm -rf /var/lib/apt/lists/* && \
     update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
     #update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java

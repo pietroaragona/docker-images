@@ -1,6 +1,6 @@
 
 IMAGE_NAME="java-builder-ubuntu"
-TAG="1.0"
+TAG="2.0"
 
 docker build -t pietroaragona/$IMAGE_NAME:$TAG .
 
