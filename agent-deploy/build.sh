@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-IMAGE_NAME="java-builder-ubuntu"
-TAG="2.0"
+IMAGE_NAME="agent-deploy"
+TAG="1.0"
 
 docker build -t pietroaragona/$IMAGE_NAME:$TAG .
 
