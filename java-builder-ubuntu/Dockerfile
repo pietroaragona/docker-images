@@ -6,7 +6,8 @@ LABEL org.opencontainers.image.authors="Pietro Aragona"
 ### common utils
 RUN apt update && apt upgrade -y && apt install -y \
     curl \
-    dos2unix
+    dos2unix \
+    jq
 
 ## install Docker and docker-compose
 RUN apt-get install -y \

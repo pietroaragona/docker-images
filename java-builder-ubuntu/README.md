@@ -11,6 +11,9 @@ In tag 2.0
 - *Maven 3.6.3*
 - docker client
 - *docker-compose 1.29.2*
+- curl
+- dos2unix
+- *jq*
 
 In tag 1.0
 - Ubuntu 18.04
@@ -19,3 +22,5 @@ In tag 1.0
 - Maven 3.6.0
 - docker client
 - docker-compose 1.24.1
+- curl
+- dos2unix
