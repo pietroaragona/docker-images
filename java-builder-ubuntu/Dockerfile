@@ -37,3 +37,12 @@ RUN apt install -y \
     rm -rf /var/lib/apt/lists/* && \
     update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
     #update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+
+# install trivy (security scanner https://github.com/aquasecurity/trivy )
+RUN apt-get update && apt-get install -y wget apt-transport-https gnupg lsb-release \
+    && wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | apt-key add - \
+    && echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | tee -a /etc/apt/sources.list.d/trivy.list \
+    && apt update \
+    && apt install trivy \
+    #
+    && rm -rf /var/lib/apt/lists/*

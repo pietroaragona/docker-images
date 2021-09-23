@@ -1,10 +1,22 @@
-Image used to build java projects through jenkins doker plugin.
+# Image used to build java projects through jenkins doker plugin.
 
 Available software:
 
 
 
-In tag 2.0
+## In tag 2.1
+- Ubuntu 20.04
+- OpenJDK 8
+- OpneJDK 11
+- Maven 3.6.3
+- docker client
+- docker-compose 1.29.2
+- curl
+- dos2unix
+- jq
+- *trivy*
+
+## In tag 2.0
 - *Ubuntu 20.04*
 - OpenJDK 8
 - OpneJDK 11
@@ -15,7 +27,7 @@ In tag 2.0
 - dos2unix
 - *jq*
 
-In tag 1.0
+## In tag 1.0
 - Ubuntu 18.04
 - OpenJDK 8
 - OpneJDK 11
