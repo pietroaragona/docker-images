@@ -2,7 +2,7 @@
 set -e
 
 IMAGE_NAME="agent-deploy"
-TAG="1.0"
+TAG="1.1"
 
 docker build -t pietroaragona/$IMAGE_NAME:$TAG .
 
