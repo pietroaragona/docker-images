@@ -1,6 +1,18 @@
 
 # Image used as Jenkins's agent to deploy
 
+## In tag 1.1.1
+- Ubuntu "20.04.3 LTS (Focal Fossa)"
+- ansible 2.11.5
+- terraform v1.0.8
+- packer 1.7.6
+- vault
+- kubectl v1.22.2
+- helm v3.7.0+geeac838
+- helm plugins
+  - cm-push 0.10.0  Push chart package to ChartMuseum
+- trivy 0.20.0
+
 ## In tag 1.1
 - Ubuntu "20.04.3 LTS (Focal Fossa)"
 - ansible 2.9.6

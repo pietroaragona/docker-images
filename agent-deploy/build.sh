@@ -2,7 +2,7 @@
 set -e
 
 IMAGE_NAME="agent-deploy"
-TAG="1.1"
+TAG="1.1.1"
 
 docker build -t pietroaragona/$IMAGE_NAME:$TAG . # --no-cache
 
@@ -22,5 +22,7 @@ echo -e "\nvault version:"
 # vault non va
 echo -e "\nHelm version:"
 docker run --rm -it pietroaragona/$IMAGE_NAME:$TAG helm version --short
+echo -e "\nHelm plugins:"
+docker run --rm -it pietroaragona/$IMAGE_NAME:$TAG helm plugin list
 echo -e "\ntrivy version:"
 docker run --rm -it pietroaragona/$IMAGE_NAME:$TAG trivy --version
