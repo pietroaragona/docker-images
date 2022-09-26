@@ -2,8 +2,10 @@
 set -e
 
 IMAGE_NAME="jenkins"
+VERSION="2.361.1-lts-jdk11"
+FULL_TAG=${IMAGE_NAME}:${VERSION}
 
-docker build -t pietroaragona/$IMAGE_NAME .
+docker build -t pietroaragona/${FULL_TAG} .
 
-echo "\n\nTo push on docker Hub: \n\tdocker push pietroaragona/$IMAGE_NAME"
-#docker push pietroaragona/$IMAGE_NAME
+echo -e "\n\nTo push on docker Hub: \n\tdocker push pietroaragona/${FULL_TAG}"
+#docker push pietroaragona/${FULL_TAG}

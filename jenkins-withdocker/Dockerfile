@@ -1,5 +1,5 @@
-FROM pietroaragona/jenkins
-MAINTAINER Pietro Aragona
+FROM pietroaragona/jenkins:2.361.1-lts-jdk11
+LABEL org.opencontainers.image.authors="Pietro Aragona"
 # https://getintodevops.com/blog/the-simple-way-to-run-docker-in-docker-for-ci
 
 
