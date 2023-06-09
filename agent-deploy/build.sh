@@ -2,7 +2,7 @@
 set -e
 
 IMAGE_NAME="agent-deploy"
-TAG="2.0.0"
+TAG="2.1.0"
 
 docker build -t pietroaragona/$IMAGE_NAME:$TAG . # --no-cache
 
